@@ -1,23 +1,18 @@
-import Auto from './auto';
-import Moto from './moto';
-import Camion from './camion';
-import RegistroAutomotor from './registroAutomotor';
+import { Mago } from './Mago';
+import { Luchador } from './Luchador';
+import { Arquero } from './Arquero';
 
-const registro = new RegistroAutomotor();
+const mago = new Mago('Veigar');
+mago.atacar();
+mago.lanzarHechizo();
+mago.evolucionar();
 
-const auto = new Auto("Toyota", "Corolla");
-const moto = new Moto("Yamaha", "R15");
-const camion = new Camion("Mercedes", "Actros");
+const luchador = new Luchador('Lee sin');
+luchador.atacar();
+luchador.usarHabilidad();
+luchador.evolucionar();
 
-registro.agregarVehiculo(auto);
-registro.agregarVehiculo(moto);
-registro.agregarVehiculo(camion);
-
-console.log("Vehiculos registrados:");
-registro.mostrarVehiculos();
-
-registro.modificarVehiculo(0, "Honda", "Civic");
-registro.darDeBajaVehiculo(1);
-
-console.log("\nDespues de modificar y dar de baja:");
-registro.mostrarVehiculos();
+const arquero = new Arquero('Legolas');
+arquero.atacar();
+arquero.disparar();
+arquero.evolucionar();
